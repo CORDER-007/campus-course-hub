@@ -1,0 +1,17 @@
+export const categoryOptions = [
+  { label: '全部课程', value: 'all' }, { label: '专业必修', value: '专业必修' }, { label: '通识教育', value: '通识教育' }, { label: '实践拓展', value: '实践拓展' },
+]
+export const courses = [
+  { id: 'CS101', code: 'CS101', name: 'Web 前端开发基础', teacher: '周老师', category: '专业必修', credits: 3, room: 'A-302', weekday: 1, dayLabel: '周一', periods: '1-2', periodLabel: '08:00 - 09:40', color: 'blue', capacity: 48, enrolled: 42, description: '从 HTML、CSS 到 JavaScript，建立现代 Web 开发的完整基础。' },
+  { id: 'UX204', code: 'UX204', name: '用户体验设计', teacher: '林老师', category: '实践拓展', credits: 2, room: '设计楼 203', weekday: 2, dayLabel: '周二', periods: '3-4', periodLabel: '10:00 - 11:40', color: 'purple', capacity: 36, enrolled: 28, description: '学习用户研究、信息架构与交互原型设计方法。' },
+  { id: 'DB205', code: 'DB205', name: '数据库原理与应用', teacher: '陈老师', category: '专业必修', credits: 3, room: 'B-108', weekday: 3, dayLabel: '周三', periods: '1-2', periodLabel: '08:00 - 09:40', color: 'orange', capacity: 56, enrolled: 50, description: '掌握关系型数据库设计、SQL 查询与数据建模核心知识。' },
+  { id: 'EN302', code: 'EN302', name: '大学英语进阶', teacher: '王老师', category: '通识教育', credits: 2, room: 'C-201', weekday: 4, dayLabel: '周四', periods: '5-6', periodLabel: '14:00 - 15:40', color: 'green', capacity: 40, enrolled: 31, description: '结合专业场景提升英语阅读、表达与跨文化沟通能力。' },
+  { id: 'AI310', code: 'AI310', name: '人工智能导论', teacher: '赵老师', category: '实践拓展', credits: 2, room: '创新楼 401', weekday: 5, dayLabel: '周五', periods: '3-4', periodLabel: '10:00 - 11:40', color: 'pink', capacity: 42, enrolled: 39, description: '了解机器学习、生成式 AI 与智能应用的基本概念。' },
+  { id: 'FE308', code: 'FE308', name: 'Vue 框架应用实践', teacher: '周老师', category: '专业必修', credits: 3, room: '实训楼 105', weekday: 1, dayLabel: '周一', periods: '3-4', periodLabel: '10:00 - 11:40', color: 'blue', capacity: 32, enrolled: 25, description: '通过综合项目掌握 Vue 组件化、状态管理和工程化开发。' },
+  { id: 'MT201', code: 'MT201', name: '数字媒体技术', teacher: '许老师', category: '实践拓展', credits: 2, room: '艺术楼 106', weekday: 2, dayLabel: '周二', periods: '7-8', periodLabel: '16:00 - 17:40', color: 'purple', capacity: 40, enrolled: 33, description: '探索数字图像、音视频与交互媒体的创作流程。' },
+  { id: 'PE110', code: 'PE110', name: '大学体育（网球）', teacher: '李老师', category: '通识教育', credits: 1, room: '东区网球场', weekday: 3, dayLabel: '周三', periods: '5-6', periodLabel: '14:00 - 15:40', color: 'green', capacity: 24, enrolled: 20, description: '掌握网球基础技术与运动规则，养成持续运动习惯。' },
+  { id: 'SE406', code: 'SE406', name: '软件工程项目管理', teacher: '何老师', category: '专业必修', credits: 2, room: 'A-205', weekday: 4, dayLabel: '周四', periods: '1-2', periodLabel: '08:00 - 09:40', color: 'orange', capacity: 48, enrolled: 44, description: '学习敏捷开发、项目计划、风险管理和团队协作方法。' },
+  { id: 'EC202', code: 'EC202', name: '创新创业基础', teacher: '吴老师', category: '通识教育', credits: 2, room: '创业中心 201', weekday: 5, dayLabel: '周五', periods: '7-8', periodLabel: '16:00 - 17:40', color: 'pink', capacity: 50, enrolled: 36, description: '从需求洞察到商业模型，训练创新思维与实践表达能力。' },
+  { id: 'JS211', code: 'JS211', name: 'JavaScript 交互编程', teacher: '郭老师', category: '实践拓展', credits: 2, room: '实训楼 208', weekday: 2, dayLabel: '周二', periods: '1-2', periodLabel: '08:00 - 09:40', color: 'orange', capacity: 36, enrolled: 34, description: '深入理解异步编程、浏览器 API 与前端交互模式。' },
+  { id: 'DS301', code: 'DS301', name: '数据可视化设计', teacher: '沈老师', category: '实践拓展', credits: 2, room: 'B-306', weekday: 4, dayLabel: '周四', periods: '3-4', periodLabel: '10:00 - 11:40', color: 'purple', capacity: 30, enrolled: 21, description: '使用图表表达复杂数据，完成从数据清洗到视觉叙事的实践。' },
+]
