@@ -1,6 +1,9 @@
 node_modules/
 dist/
 .pnpm-store/
+.artifact-build/
+.codex-finalizer/
+submission/
 .idea/
 .DS_Store
 *.local
