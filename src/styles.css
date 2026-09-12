@@ -25,3 +25,33 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 720px) { .sidebar { display: none; }.topbar { height: 64px; padding: 0 17px; }.mobile-brand { display: flex; }.breadcrumb { display: none; }.top-actions { gap: 12px; }.user-copy, .user-menu > svg { display: none; }.page-container { padding: 25px 16px 35px; }.welcome-row, .page-title-row { align-items: flex-start; flex-direction: column; margin-bottom: 23px; }.welcome-row h1, .page-container h1 { font-size: 24px; }.welcome-row .primary-btn, .title-actions { width: 100%; }.title-actions { justify-content: space-between; }.stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }.stat-card { padding: 13px; min-height: 112px; }.stat-card strong { font-size: 20px; }.dashboard-grid, .lower-grid, .schedule-bottom { grid-template-columns: 1fr; }.panel { padding: 16px; }.course-toolbar { flex-wrap: wrap; gap: 10px; }.search-box { max-width: none; flex-basis: 100%; }.filter-tabs { overflow-x: auto; order: 3; flex-basis: 100%; }.sort-select { margin-left: auto; }.course-grid { grid-template-columns: 1fr; }.schedule-summary { gap: 14px; flex-wrap: wrap; }.schedule-summary > div:not(.schedule-tip) { flex: 1; min-width: 55px; }.schedule-tip { margin-left: 0; width: 100%; }.page-title-row p { line-height: 1.7; }.selected-row { grid-template-columns: 1.4fr 1fr .3fr; }.selected-row > :last-child { display: none; }.selected-row.header > :last-child { display: none; } }
 @media print { .sidebar, .topbar, .page-title-row, .schedule-summary, .schedule-bottom { display: none !important; }.page-container { padding: 0; }.timetable-panel { border: 0; } }
 
+
+
+.popover-wrap { position: relative; }
+.icon-btn, .user-menu { min-width: 44px; min-height: 44px; }
+.icon-btn { display: grid; place-items: center; border-radius: 10px; transition: background .2s, color .2s; }
+.icon-btn:hover, .icon-btn:focus-visible { background: #f0f4fc; color: var(--blue); outline: none; }
+.icon-btn:focus-visible, .user-menu:focus-visible, .identity-option:focus-visible, .notification-item:focus-visible, .mark-read-btn:focus-visible { outline: 3px solid rgba(36,87,214,.25); outline-offset: 2px; }
+.notification-count { position: absolute; top: -1px; right: -3px; min-width: 16px; height: 16px; padding: 0 4px; display: grid; place-items: center; border-radius: 8px; background: #e66d82; color: #fff; border: 2px solid #fff; font-size: 9px; line-height: 1; font-weight: 700; }
+.user-menu { border: 0; background: transparent; padding: 3px 5px; display: flex; align-items: center; gap: 9px; color: var(--ink); border-radius: 10px; text-align: left; transition: background .2s; }
+.user-menu:hover, .user-menu[aria-expanded="true"] { background: #f5f7fb; }
+.notification-panel, .identity-panel { position: absolute; top: calc(100% + 12px); right: 0; z-index: 20; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 45px rgba(31,52,97,.16); overflow: hidden; }
+.notification-panel { width: 365px; }
+.identity-panel { width: 300px; }
+.notification-panel::before, .identity-panel::before { content: ''; position: absolute; top: -6px; right: 20px; width: 11px; height: 11px; background: #fff; border-left: 1px solid var(--line); border-top: 1px solid var(--line); transform: rotate(45deg); }
+.popover-heading { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 17px 18px 14px; border-bottom: 1px solid #eef2f7; background: #fff; }
+.popover-heading > div { display: flex; flex-direction: column; gap: 5px; }
+.popover-heading strong { color: var(--ink); font-size: 14px; }
+.popover-heading span { color: var(--muted); font-size: 10px; }
+.mark-read-btn { border: 0; background: transparent; color: var(--blue); font-size: 11px; padding: 2px 0; white-space: nowrap; }
+.notification-list { max-height: 360px; overflow-y: auto; }
+.notification-item { width: 100%; border: 0; border-bottom: 1px solid #f0f3f8; background: #fff; display: flex; align-items: flex-start; gap: 10px; padding: 14px 17px; text-align: left; position: relative; transition: background .2s; }
+.notification-item:last-child { border-bottom: 0; }
+.notification-item:hover, .notification-item.unread { background: #f8faff; }
+.notification-icon { width: 30px; height: 30px; flex: 0 0 30px; display: grid; place-items: center; border-radius: 9px; }
+.notification-important { color: #e17a8f; background: #fff0f3; }.notification-warning { color: #db942f; background: #fff5e8; }.notification-info { color: #517bd9; background: #edf2ff; }
+.notification-copy { min-width: 0; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+.notification-copy strong { color: #526078; font-size: 11px; line-height: 1.4; }.notification-copy span { color: #8f9caf; font-size: 10px; line-height: 1.55; white-space: normal; }.notification-copy small { color: #b0b9c7; font-size: 9px; }
+.unread-dot { width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: #e66d82; margin-top: 6px; }.notification-empty { min-height: 150px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 9px; color: #a0aabd; font-size: 11px; }
+.identity-option { width: 100%; border: 0; border-bottom: 1px solid #f0f3f8; background: #fff; display: flex; align-items: center; gap: 10px; padding: 12px 17px; text-align: left; color: var(--ink); transition: background .2s; }.identity-option:last-child { border-bottom: 0; }.identity-option:hover, .identity-option.active { background: #f7f9ff; }.identity-avatar { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: #eaf0ff; color: var(--blue); font-size: 13px; font-weight: 700; }.identity-option:nth-child(3) .identity-avatar { background: #f2edff; color: #8a65ca; }.identity-option:nth-child(4) .identity-avatar { background: #fff3e5; color: #d88d2d; }.identity-copy { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 3px; }.identity-copy strong { font-size: 12px; }.identity-copy small { color: #98a4b7; font-size: 10px; white-space: normal; }.identity-option > svg { color: var(--blue); }
+@media (max-width: 720px) { .notification-panel { position: fixed; top: 72px; right: 12px; width: min(365px, calc(100vw - 24px)); }.identity-panel { right: -4px; width: min(300px, calc(100vw - 24px)); }.notification-panel::before { right: 72px; }.identity-panel::before { right: 22px; }.top-actions { gap: 7px; }.user-menu { padding: 2px; }.icon-btn { padding: 3px; } }
